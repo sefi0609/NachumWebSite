@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'styleSheet.css' %}">
+    <title>{% block title %}Home Page{% endblock %}</title>
+</head>
+<body>
+    <header class="toolbar">
+        <div class="logo">Nachum Kroytoro</div>
+        <nav>
+            <a href="https://www.linkedin.com/in/nachum-kroytoro-453412227/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        &copy; 2024 Kroytoro. All rights reserved
+    </footer>
+</body>
+</html>
